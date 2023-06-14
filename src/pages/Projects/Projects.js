@@ -36,61 +36,27 @@ export const Projects = () => {
 
   return (
     <section className="project" id="project">
-      {({ isVisible }) =>
-        <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-          <Container>
-            <h2>Projetos</h2>
-            <p>Veja alguns dos nossos projetos já entregues 👇</p>
-            {/* <Row>
-          <Col size={12}>
-            <TrackVisibility>
-              
-                  
-                  <Tab.Container id="projects-tabs" defaultActiveKey="first">
-                    <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
-                      <Nav.Item>
-                        <Nav.Link eventKey="first">Desenv. WEB</Nav.Link>
-                      </Nav.Item>
-                      <Nav.Item>
-                        <Nav.Link eventKey="second">Social Media</Nav.Link>
-                      </Nav.Item>
-                      <Nav.Item>
-                        <Nav.Link eventKey="third">Marketing</Nav.Link>
-                      </Nav.Item>
-                    </Nav>
-                    <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
-                      <Tab.Pane eventKey="first">
-                        <Row> */}
-            <h1>Desenvolvimento WEB</h1>
-            <Carousel showDots={true} responsive={responsiveDesenv}>
-              {projectDesenv}
-            </Carousel>
-            {/* </Row>
-                      </Tab.Pane>
-                      <Tab.Pane eventKey="second">
-                        <Row> */}
-            <h1>Social Media</h1>
-            <Carousel showDots={true} responsive={responsiveSocialMedia}>
-              {projectSocialMedia}
-            </Carousel>
-            {/* </Row>
-                      </Tab.Pane>
-                      <Tab.Pane eventKey="third">
-                        <Row> */}
-            <h1>Marketing</h1>
-            <Carousel showDots={true} responsive={responsiveMarketing}>
-              {projectMarketing}
-            </Carousel>
-            {/* </Row>
-                      </Tab.Pane>
-                    </Tab.Content>
-                  </Tab.Container> */}
-            {/* </div>} */}
-            {/* </TrackVisibility>
-          </Col>
-        </Row> */}
-          </Container>
-        </div>}
+      <Container>
+        <TrackVisibility>
+          {({ isVisible }) =>
+            <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+              <h2>Projetos</h2>
+              <p>Veja alguns dos nossos projetos já entregues 👇</p>
+              <h1>Desenvolvimento WEB</h1>
+              <Carousel showDots={true} responsive={responsiveDesenv}>
+                {projectDesenv}
+              </Carousel>
+              <h1>Social Media</h1>
+              <Carousel showDots={true} responsive={responsiveSocialMedia}>
+                {projectSocialMedia}
+              </Carousel>
+              <h1>Marketing</h1>
+              <Carousel showDots={true} responsive={responsiveMarketing}>
+                {projectMarketing}
+              </Carousel>
+            </div>}
+        </TrackVisibility>
+      </Container>
       <img className='background-image-right' src={colorSharp2}></img>
     </section>
   )

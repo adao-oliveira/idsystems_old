@@ -47,18 +47,14 @@ export const Contact = () => {
   return (
     <section className="contact" id="connect">
       <Container>
-        <Row className="align-items-center">
-          <Col size={12} md={6}>
-            <TrackVisibility>
-              {({ isVisible }) =>
-                <img className={isVisible ? "animate__animated animate__fadeInLeft" : ""} src={contactImg} alt="Contato" />
-              }
-            </TrackVisibility>
-          </Col>
-          <Col size={12} md={6}>
-            <TrackVisibility>
-              {({ isVisible }) =>
-                <div className={isVisible ? "animate__animated animate__fadeInLeft" : ""}>
+        <TrackVisibility>
+          {({ isVisible }) =>
+            <Row className={isVisible ? "animate__animated animate__fadeInLeft align-items-center" : ""}>
+              <Col size={12} md={6}>
+                <img src={contactImg} alt="Contato" />
+              </Col>
+              <Col size={12} md={6}>
+                <div>
                   <h2>Entrar em contato</h2>
                   <form onSubmit={handleSubmit}>
                     <Row>
@@ -78,7 +74,7 @@ export const Contact = () => {
                         <textarea rows="6" value={formDetails.message} placeholder="Mensagem" onChange={(e) => onFormUpdate('message', e.target.value)}></textarea>
                       </Col>
                       <div className="d-flex justify-content-center">
-                        <button className="BtnAnimationConnect" type="submit" style={{ width:'50%' }}>
+                        <button className="BtnAnimationConnect" type="submit" style={{ width: '50%' }}>
                           <span className="TxtAnimationConnect">{buttonText}</span>
                         </button>
                       </div>
@@ -90,10 +86,10 @@ export const Contact = () => {
                       }
                     </Row>
                   </form>
-                </div>}
-            </TrackVisibility>
-          </Col>
-        </Row>
+                </div>
+              </Col>
+            </Row>}
+        </TrackVisibility>
       </Container>
     </section>
   )
