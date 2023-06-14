@@ -1,0 +1,62 @@
+.newsletter-bx {
+    background: #FFFFFF;
+    border-radius: 55px;
+    color: #121212;
+    padding: 85px 125px;
+    margin-bottom: 80px;
+    margin-top: -122px;
+  }
+  @media (max-width: 1200px)
+  {
+    .newsletter-bx
+     {
+      padding: 20px;
+     }
+     .newsletter-bx img {
+      margin-top: -14vh !important;
+    }
+  }
+  .newsletter-bx h3 {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 1.2em;
+  }
+  .newsletter-bx img {
+    margin-top: -25vh;
+    /* margin-left: -180px; */
+    width: 60% !important;
+  }
+  .new-email-bx form input, .new-email-bx form button {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #592095;
+    border-radius: 20px;
+    color: #121212;
+    margin: 0 0 8px 0;
+    padding: 18px 26px;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    transition: 0.3s ease-in-out;
+  }
+  .new-email-bx form button {
+    width: 60%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #592095;
+  }
+  .new-email-bx form input:focus, button:focus {
+    background: #592095;
+    color: #fff;
+  }
+  .new-email-bx form input::placeholder, button::placeholder {
+    font-size: 16px;
+    font-weight: 400;
+    color: #121212;
+  }
+  .new-email-bx form input:focus::placeholder, button:focus::placeholder {
+    color: #fff;
+    opacity: 0.8;
+  }
+  .new-email-bx form button:hover {
+    background: #592095;
+  }
